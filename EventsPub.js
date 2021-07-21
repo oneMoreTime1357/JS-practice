@@ -1,3 +1,4 @@
+//事件发布订阅
 class Events {
   constructor () {
     this.caches = {}
