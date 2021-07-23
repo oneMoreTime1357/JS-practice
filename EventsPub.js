@@ -1,6 +1,7 @@
 //事件发布订阅
 class Events {
   constructor () {
+    // 缓存事件
     this.caches = {}
   }
 
@@ -22,6 +23,7 @@ class Events {
     }
   }
 
+  // 订阅一次的事件，使用就销毁
   once (eventName, fn) {
     let _this = this
     function on () {
