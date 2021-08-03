@@ -16,6 +16,9 @@ function deepCopy (obj) {
 }
 
 // 解决循环引用的问题
+function deepCloneWeak (obj, hash = new WeakMap()) {
+  
+}
 
 var obj = {
 	a: 1,
