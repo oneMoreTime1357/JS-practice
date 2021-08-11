@@ -42,6 +42,7 @@ class PromiseFake {
     }
 
     try {
+      // 一个promise传入成功的回调和失败的回调
       executor(resolve, reject)
     } catch (error) {
       // 发生异常时执行失败逻辑
@@ -49,7 +50,7 @@ class PromiseFake {
     }
   }
 
-  then(onFullfilled, onRejected) {
+  then(onFullfilled, onRejected) { // then接收两个函数，一个是resolve函数一个是reject函数分别处理成功和失败
     if (this.status === FULLFILLED) {
       onFullfilled(this.value)
     }
@@ -71,7 +72,7 @@ class PromiseFake {
   }
 }
 
-// test
+// ----test
 const p = new PromiseFake((resolve, reject) => {
   setTimeout(() => {
     resolve('success')

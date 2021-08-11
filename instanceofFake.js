@@ -16,8 +16,8 @@ console.log(nicole instanceof programmer) // true
 // 实现一个fake instanceof
 
 function instanceofFake (leftVal, rightVal) {
-  let rightProto = rightVal.prototype // 
-  leftVal = leftVal.__proto__
+  let rightProto = rightVal.prototype // 获取原型
+  leftVal = leftVal.__proto__ // 获取实例的构造函数的原型
 
   while(true) {
     if (leftVal === null) {
